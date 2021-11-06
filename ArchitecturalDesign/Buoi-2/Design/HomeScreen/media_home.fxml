@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="202.0" prefWidth="284.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="6.0" layoutY="8.0" prefHeight="187.0" prefWidth="272.0">
+         <children>
+            <VBox prefHeight="187.0" prefWidth="141.0">
+               <children>
+                  <ImageView fitHeight="189.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/images/book/book3.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="189.0" prefWidth="142.0">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="83.0" text="Harry Potter" />
+                  <Label text="Giá" />
+                  <Label layoutX="10.0" layoutY="42.0" text="Mô tả" />
+                  <VBox prefHeight="69.0" prefWidth="119.0">
+                     <children>
+                        <Label text="Số lượng" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="93.0" prefHeight="69.0" prefWidth="119.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Add to Cart" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
