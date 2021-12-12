@@ -9,17 +9,19 @@ import java.util.logging.Logger;
 /**
  * Rush info entity to store information in rush order
  *
- * @author sonnh
+ * @author tuyetht
  */
 public class RushInfo{
     /***
-     * rush info
+     * rush instruction
      */
     private String instruction;
+    
     /**
      * rush time
      */
     private Date time;
+    
     /**
      * logger
      */
@@ -49,8 +51,8 @@ public class RushInfo{
 
     /***
      * Easy constructor
-     * @param instruction rush instruction
-     * @param time time, in format yyyy/MM/dd HH:mm:ss
+     * @param instruction: rush instruction
+     * @param time: time, in format yyyy/MM/dd HH:mm:ss
      */
     public RushInfo(String instruction, String time){
         //after refactoring
@@ -79,9 +81,9 @@ public class RushInfo{
     }
 
     /**
-     * setter
+     * setter instruction
      *
-     * @param instruction rush instruction
+     * @param instruction: rush instruction
      */
     public void setInstruction(String instruction){
         this.instruction = instruction;
@@ -92,7 +94,7 @@ public class RushInfo{
     }
 
     /**
-     * setter
+     * setter time
      *
      * @param time rush time
      */
@@ -104,7 +106,7 @@ public class RushInfo{
      * set rush time in string
      * this is for convenient when using empty constructor, use time in string format for easy readable
      *
-     * @param time time in string, must be yyyy/MM/dd HH:mm:ss
+     * @param time: time in string, must be yyyy/MM/dd HH:mm:ss
      * @throws ParseException if parsing get error
      */
     public void setTime(String time) throws ParseException{

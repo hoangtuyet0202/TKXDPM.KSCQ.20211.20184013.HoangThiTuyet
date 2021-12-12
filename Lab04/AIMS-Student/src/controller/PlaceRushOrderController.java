@@ -20,7 +20,7 @@ public class PlaceRushOrderController extends BaseController{
     /**
      * Validate provided rush info
      *
-     * @param rushInfo rush info that customer provided, must not be null
+     * @param rushInfo: rush info that customer provided, must not be null
      * @return whether rush info is valid
      */
     public static boolean validateInstruction(String rushInfo){
@@ -45,7 +45,7 @@ public class PlaceRushOrderController extends BaseController{
     /**
      * validate rush time (at least after 2h from checked out time for preparation)
      *
-     * @param date date in format yyyy/MM/dd HH:mm:ss
+     * @param date: date in format yyyy/MM/dd HH:mm:ss
      * @exception ParseException if parsing failed
      * @return
      */

@@ -23,7 +23,6 @@ class PlaceOrderControllerTest{
     void tearDown(){
     }
 
-    /*sonnh*/
     @ParameterizedTest
     @CsvSource({"0123456789, true", "01234, false", ", false", "abcdefghik, false"})
     void validatePhoneNumber(String phone, boolean expect){
@@ -32,7 +31,6 @@ class PlaceOrderControllerTest{
         assertEquals(expect, isValid);
     }
 
-    /*sonnh*/
     @ParameterizedTest
     @CsvSource({"Hanoi, Vietnam, true", "hfd8*&TT, false", ", false"})
     void validateAddress(String address, boolean expect){
@@ -41,7 +39,6 @@ class PlaceOrderControllerTest{
         assertEquals(expect, isValid);
     }
 
-    /*sonnh*/
     @ParameterizedTest
     @CsvSource({"Nguyen Van A, true", "hfd8*&TT, false", "Nguyen 12, false"})
     void validateName(String name, boolean expect){
