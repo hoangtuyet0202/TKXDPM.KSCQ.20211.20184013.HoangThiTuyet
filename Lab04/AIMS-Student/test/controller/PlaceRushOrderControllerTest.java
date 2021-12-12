@@ -30,7 +30,7 @@ class PlaceRushOrderControllerTest{
     }
 
     @ParameterizedTest
-    @CsvSource({"2021-12-08 22:30:30, false", "2021-12-10 23:30:30, true"})
+    @CsvSource({"2021-12-12 20:30:30, false", "2021-12-12 21:30:30, true"})
     void validateTime(String time, boolean expected) throws ParseException{
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         boolean isValid = PlaceRushOrderController.validateTime(formatter.parse(time));
@@ -39,7 +39,7 @@ class PlaceRushOrderControllerTest{
     }
 
     @ParameterizedTest
-    @CsvSource({"2021/12/08 22:30:30, false", "2021/12/10 23:30:30, true"})
+    @CsvSource({"2021/12/12 20:30:30, false", "2021/12/12 21:30:30, true"})
     void validateTimeInString(String time, boolean expected) throws ParseException{
         boolean isValid = PlaceRushOrderController.validateTime(time);
 

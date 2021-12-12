@@ -32,14 +32,14 @@ public class RushInfo{
     private final DateFormat FORMATTER = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
     /**
-     * Empty constructor
+     * constructor
      */
     RushInfo(){
         LOGGER.info("This is empty constructor, please set time and instruction after this");
     }
 
     /**
-     * Full constructor
+     * constructor
      *
      * @param instruction for rush instruction
      * @param time        rush time
@@ -50,7 +50,7 @@ public class RushInfo{
     }
 
     /***
-     * Easy constructor
+     * constructor
      * @param instruction: rush instruction
      * @param time: time, in format yyyy/MM/dd HH:mm:ss
      */

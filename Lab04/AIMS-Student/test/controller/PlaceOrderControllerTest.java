@@ -40,7 +40,7 @@ class PlaceOrderControllerTest{
     }
 
     @ParameterizedTest
-    @CsvSource({"Nguyen Van A, true", "hfd8*&TT, false", "Nguyen 12, false"})
+    @CsvSource({"Hoang Thi Tuyet, true", "hfd8*&TT, false", "Nguyen 12, false"})
     void validateName(String name, boolean expect){
         boolean isValid = placeOrderController.validateName(name);
 
