@@ -42,8 +42,8 @@ public class API{
     /**
      * Get API 
      *
-     * @param url   url of api
-     * @param token secret token
+     * @param url:   url of api
+     * @param token: secret token
      * @return not known yet
      * @throws Exception
      */
@@ -61,9 +61,9 @@ public class API{
     /**
      * post APi 
      *
-     * @param url   API url
-     * @param data  data to send
-     * @param token secret token
+     * @param url:   API url
+     * @param data:  data to send
+     * @param token: secret token
      * @return not known yet
      * @throws IOException
      */
@@ -107,9 +107,9 @@ public class API{
     /**
      * Prepare connection to call
      * 
-     * @param url    api url
-     * @param method POST, GET, PATCH ...
-     * @param token  secret token
+     * @param url: api url
+     * @param method: POST, GET, PATCH ...
+     * @param token:  secret token
      * @return HttpUrlConnection
      * @throws IOException
      */
@@ -130,7 +130,7 @@ public class API{
 
     /** 
      * Read response from HttpConnection after request
-     * @param conn the connection
+     * @param conn: the connection
      * @return response string
      * @throws IOException
      */

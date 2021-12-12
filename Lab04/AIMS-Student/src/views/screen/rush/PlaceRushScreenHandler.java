@@ -31,7 +31,7 @@ public class PlaceRushScreenHandler extends BaseScreenHandler{
 
     /**
      * set invoice to add rush info
-     * @param invoice invoice from InvoiceScreen
+     * @param invoice: invoice from InvoiceScreen
      */
     public void setInvoice(Invoice invoice){
         this.invoice = invoice;
@@ -58,15 +58,13 @@ public class PlaceRushScreenHandler extends BaseScreenHandler{
     public void goToPayment(MouseEvent event){
         try{
             String instruction = instructionInput.getText();
-            String time = timePicker.getValue().format(DATE_FORMATTER).concat(" 08:00:00");
+            String time = timePicker.getValue().format(DATE_FORMATTER).concat("08:00:00");
 
             if(PlaceRushOrderController.validateInstruction(instruction) && PlaceRushOrderController.validateTime(
                     time)){
-                //set rush info to order
                 ((PlaceOrderController) this.getPreviousScreen().getBController()).addRushInfo(invoice.getOrder(),
                         new RushInfo(instruction, time));
 
-                // continue to payment
                 ((InvoiceScreenHandler) this.getPreviousScreen()).goToPayment();
             }else PopupScreen.error("Not valid instruction or time. Please try again.");
         }catch(ParseException|IOException e){

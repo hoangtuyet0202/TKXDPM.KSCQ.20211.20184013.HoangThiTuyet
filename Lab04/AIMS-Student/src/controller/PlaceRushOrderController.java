@@ -20,11 +20,11 @@ public class PlaceRushOrderController extends BaseController{
     /**
      * Validate provided rush info
      *
-     * @param rushInfo: rush info that customer provided, must not be null
+     * @param rushInfo: rush info must not be null
      * @return whether rush info is valid
      */
     public static boolean validateInstruction(String rushInfo){
-        LOGGER.info("Validating rush info: " + rushInfo);
+        LOGGER.info("Validating rush infomation: " + rushInfo);
         return rushInfo != null;
     }
 
@@ -38,7 +38,7 @@ public class PlaceRushOrderController extends BaseController{
         Date now = new Date();
 
         LOGGER.info("Validating rush time: " + DATE_FORMATTER.format(date) + " at " + DATE_FORMATTER.format(now));
-        // if rush date is more than 2 hour from now
+        // if rush time is more than 2 hour from now
         return (date.getTime() - now.getTime()) > 2 * 60 * 60 * 1000;
     }
 
