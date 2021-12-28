@@ -13,6 +13,10 @@ public class Order {
     private List lstOrderMedia;
     private HashMap<String, String> deliveryInfo;
     /**
+     * rush info if this is rush order
+     */
+    private RushInfo rushInfo;
+    /**
      * if this is rush order
      */
     private boolean isRush;
@@ -23,11 +27,6 @@ public class Order {
     public void setRush(boolean rush){
         isRush = rush;
     }
-
-    /**
-     * rush info if this is rush order
-     */
-    private RushInfo rushInfo;
 
     public RushInfo getRushInfo(){
         return rushInfo;

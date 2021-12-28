@@ -18,19 +18,16 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.logging.Logger;
 
-import entity.payment.CreditCard;
-import entity.payment.PaymentTransaction;
-
 /**
  * Represent an API call
  * @author tuyetht
  * @version 1.1
- * Date: 12/12/2021
+ * Date: 12/7/2021
  */
 public class API{
 
     /**
-     * A date formatter to format all date to yyyy/MM/dd HH:mm:ss 
+     * A date formatter to format all date to yyyy/MM/dd HH:mm:ss
      */
     public static DateFormat DATE_FORMATER = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
@@ -40,10 +37,10 @@ public class API{
     private static final Logger LOGGER = Utils.getLogger(Utils.class.getName());
 
     /**
-     * Get API 
+     * Get API
      *
-     * @param url:   url of api
-     * @param token: secret token
+     * @param url   url of api
+     * @param token secret token
      * @return not known yet
      * @throws Exception
      */
@@ -59,18 +56,18 @@ public class API{
     int var;
 
     /**
-     * post APi 
+     * post API
      *
-     * @param url:   API url
-     * @param data:  data to send
-     * @param token: secret token
+     * @param url   API url
+     * @param data  data to send
+     * @param token secret token
      * @return not known yet
      * @throws IOException
      */
     public static String post(String url, String data, String token) throws IOException{
         // set up
         allowMethods("PATCH");
-        HttpURLConnection conn = setUpConnection(url, "POST", token);
+        HttpURLConnection conn = setUpConnection(url, "PATCH", token);
 
         // send data
         Writer writer = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream()));
@@ -80,7 +77,7 @@ public class API{
         return readResponse(conn);
     }
 
-    /** 
+    /** tuyetht
      * @param methods allowed method (POST, PATCH ...)
      * @deprecated only worked with java <= 11
      */
@@ -106,10 +103,9 @@ public class API{
 
     /**
      * Prepare connection to call
-     * 
-     * @param url: api url
-     * @param method: POST, GET, PATCH ...
-     * @param token:  secret token
+     * @param url    api url
+     * @param method POST, GET, PATCH ...
+     * @param token  secret token
      * @return HttpUrlConnection
      * @throws IOException
      */
@@ -130,7 +126,7 @@ public class API{
 
     /** 
      * Read response from HttpConnection after request
-     * @param conn: the connection
+     * @param conn the connection
      * @return response string
      * @throws IOException
      */

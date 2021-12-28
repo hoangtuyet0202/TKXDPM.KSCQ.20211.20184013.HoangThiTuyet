@@ -4,7 +4,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
-import java.util.List;
 
 import entity.db.AIMSDB;
 
@@ -137,12 +136,6 @@ public class Book extends Media {
 			throw new SQLException();
 		}
     }
-
-    @Override
-    public List getAllMedia() {
-        return null;
-    }
-
 
     @Override
     public String toString() {

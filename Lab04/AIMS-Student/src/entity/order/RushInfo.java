@@ -13,15 +13,13 @@ import java.util.logging.Logger;
  */
 public class RushInfo{
     /***
-     * rush instruction
+     * rush info
      */
     private String instruction;
-    
     /**
      * rush time
      */
     private Date time;
-    
     /**
      * logger
      */
@@ -32,14 +30,14 @@ public class RushInfo{
     private final DateFormat FORMATTER = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
     /**
-     * constructor
+     * Empty constructor
      */
     RushInfo(){
         LOGGER.info("This is empty constructor, please set time and instruction after this");
     }
 
     /**
-     * constructor
+     * Full constructor
      *
      * @param instruction for rush instruction
      * @param time        rush time
@@ -50,9 +48,9 @@ public class RushInfo{
     }
 
     /***
-     * constructor
-     * @param instruction: rush instruction
-     * @param time: time, in format yyyy/MM/dd HH:mm:ss
+     * Easy constructor
+     * @param instruction rush instruction
+     * @param time time, in format yyyy/MM/dd HH:mm:ss
      */
     public RushInfo(String instruction, String time){
         //after refactoring
@@ -81,9 +79,9 @@ public class RushInfo{
     }
 
     /**
-     * setter instruction
+     * setter
      *
-     * @param instruction: rush instruction
+     * @param instruction rush instruction
      */
     public void setInstruction(String instruction){
         this.instruction = instruction;
@@ -94,7 +92,7 @@ public class RushInfo{
     }
 
     /**
-     * setter time
+     * setter
      *
      * @param time rush time
      */
@@ -106,7 +104,7 @@ public class RushInfo{
      * set rush time in string
      * this is for convenient when using empty constructor, use time in string format for easy readable
      *
-     * @param time: time in string, must be yyyy/MM/dd HH:mm:ss
+     * @param time time in string, must be yyyy/MM/dd HH:mm:ss
      * @throws ParseException if parsing get error
      */
     public void setTime(String time) throws ParseException{

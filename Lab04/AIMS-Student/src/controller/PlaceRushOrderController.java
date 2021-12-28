@@ -3,11 +3,8 @@ package controller;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.logging.Logger;
-
-import utils.Configs;
 
 public class PlaceRushOrderController extends BaseController{
     /**
@@ -23,11 +20,11 @@ public class PlaceRushOrderController extends BaseController{
     /**
      * Validate provided rush info
      *
-     * @param rushInfo: rush info must not be null
+     * @param rushInfo rush info that customer provided, must not be null
      * @return whether rush info is valid
      */
     public static boolean validateInstruction(String rushInfo){
-        LOGGER.info("Validating rush infomation: " + rushInfo);
+        LOGGER.info("Validating rush info: " + rushInfo);
         return rushInfo != null;
     }
 
@@ -41,32 +38,19 @@ public class PlaceRushOrderController extends BaseController{
         Date now = new Date();
 
         LOGGER.info("Validating rush time: " + DATE_FORMATTER.format(date) + " at " + DATE_FORMATTER.format(now));
-        // if rush time is more than 2 hour from now
+        // if rush date is more than 2 hour from now
         return (date.getTime() - now.getTime()) > 2 * 60 * 60 * 1000;
     }
 
     /**
      * validate rush time (at least after 2h from checked out time for preparation)
      *
-     * @param date: date in format yyyy/MM/dd HH:mm:ss
+     * @param date date in format yyyy/MM/dd HH:mm:ss
      * @exception ParseException if parsing failed
      * @return
      */
     public static boolean validateTime(String date) throws ParseException{
         return validateTime(DATE_FORMATTER.parse(date));
     }
-    /**
-	 * validate province
-	 * 
-	 * @param province
-	 * @return true if province support rush order
-	 * @author tuyetht
-	 */
-	public boolean validateProvince(String province) {
-		if (Arrays.asList(Configs.PROVINCES).contains(province)) {
-//			checkValidateSupport();
-			return true;
-		}
-		return false;
-	}
+
 }

@@ -3,7 +3,6 @@ package entity.media;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
-import java.util.List;
 
 public class DVD extends Media {
 
@@ -132,10 +131,5 @@ public class DVD extends Media {
         } else {
             throw new SQLException();
         }
-    }
-
-    @Override
-    public List getAllMedia() {
-        return null;
     }
 }

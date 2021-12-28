@@ -4,20 +4,15 @@ import java.io.IOException;
 import java.util.Map;
 
 import controller.PaymentController;
-import entity.cart.Cart;
-import common.exception.PlaceOrderException;
 import entity.invoice.Invoice;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import utils.Configs;
 import views.screen.BaseScreenHandler;
-import views.screen.popup.PopupScreen;
 
 public class PaymentScreenHandler extends BaseScreenHandler {
 
